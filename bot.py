@@ -32,11 +32,8 @@ async def undaniel(ctx):
         pairs = json.loads(f.read())
     for user in ctx.guild.members:
         try:
-            if str(user.id) in pairs:
-                print(True)
+            if str(user.id) in pairs and pairs[str(user.id)] != 'daniel':
                 await user.edit(nick=pairs[str(user.id)])
-            else:
-                print(False)
         except Exception as e:
             print(user, e)
 
