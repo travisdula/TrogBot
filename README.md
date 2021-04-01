@@ -1,0 +1,2 @@
+# TrogBot
+Discord bot
